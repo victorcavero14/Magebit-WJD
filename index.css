@@ -1,0 +1,588 @@
+:root {
+  --blue: #4066A5;
+  --black: #131821;
+  --black-grey: #6A707B;
+  --grey: #E3E3E4;
+  --grey-white: #F2F5FA;
+}
+
+a, a:hover, a:focus, a:active {
+  color: inherit;
+  text-decoration-line: underline;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+a:active {
+  color: var(--black)
+}
+
+input[type='checkbox']{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  margin: 0px;
+}
+
+input[type="checkbox"]:focus{
+  outline:0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Georgia';
+  width: 100%;
+  height: 100%;
+  min-width: 1920px;
+  min-height: 1080px;
+}
+
+body {
+  margin : 0;
+  height: 100%;
+  width: 100%;
+  min-width: 1920px;
+  min-height: 1080px;
+}
+  
+h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color:var(--black);
+}
+  
+h2, .about, .howitworks, .contact {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--black);
+  opacity: 0.5; 
+}
+
+p{
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--black-grey);
+}
+
+.main-window { 
+  width: 100%;
+  height: 100%;
+  min-width: 1920px;
+  min-height: 1080px;
+  display: grid;
+  grid-template-columns: 680px calc(100% - 680px);
+  grid-template-rows: 100%;
+}
+
+.window-login {
+  height: 100%;
+  width: 680px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+}
+
+.window-image 
+{
+  position: absolute;
+  width: calc(100% - 680px);
+  height: 100%;
+  left: 680px;
+  min-width: 1240px;
+  min-height: 1080px;
+  background-size: cover;
+  background-image: url(img/image_summer_desk.png);
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.home-img {
+  padding-right: 110px;
+  vertical-align: bottom;
+}
+
+.home-img-src {
+  content: url('img/logo_pineapple-1.svg');
+}
+
+.topbar {
+  position: absolute;
+  width: 480px;
+  height: 40px;
+  left: 100px;
+  top: 100px;
+}
+
+.topbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+  
+.topbar ul li {
+  display: inline-block;
+}
+  
+.topbar ul li a {
+  text-decoration: none;
+}
+
+.about, .howitworks {
+  padding-right: 26px;
+}
+
+.trophy {
+  display: none;
+  z-index: 2;
+}
+
+.subscribe {
+  position: absolute;
+  width: 399px;
+  height: 44px;
+  left: 140px;
+  top: 351px;
+}
+
+.subscribe-info {
+  position: absolute;
+  width: 400px;
+  height: 56px;
+  left: 140px;
+  top: 420px;
+}
+
+.input-email {
+  position: absolute;
+  width: 663px;
+  height: 70px;
+  left: 100px;
+  top: 539px;
+  font-size: 16px;
+  line-height: 24px;
+  background: #FFFFFF;
+  border: 1px solid var(--grey);
+  border-left: 4px solid var(--blue);
+  box-sizing: border-box;
+  padding-left: 42px;
+}
+
+.submit-button {
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  left: 699px;
+  top: 567px;
+  background: transparent;
+  border: none;
+  color: transparent;
+  z-index: 1;
+}
+
+.input-email-arrow-icon {
+  position: absolute;
+  width: 24px;
+  height: 14px;
+  left: 699px;
+  top: 567px;
+}
+
+.input-email:focus {
+  box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+.input-email:hover {
+  border: 1px solid var(--blue);
+  border-left: 4px solid var(--blue);
+  box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+
+.error {
+  position: absolute;
+  width: 450px;
+  height: 26px;
+  left: 144px;
+  top: 610px;
+  color:red;
+}
+
+.input-checkbox {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 137px;
+  top: 663px;
+  z-index: 1;
+}
+
+.icon-checkbox {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 137px;
+  top: 663px;
+
+  background-color: #FFFFFF;
+  border: 1px solid var(--grey);
+  box-sizing: border-box;
+  border-radius: 3px;
+} 
+
+.input-checkbox:checked ~ .icon-checkbox {
+  background: url('img/ic_checkmark.svg');
+  background-color: var(--blue);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-checkbox-info {
+  position: absolute;
+  width: 359px;
+  height: 28px;
+  left: 181px;
+  top: 662px;
+  color: var(--black-grey);
+}
+
+.separator {
+  position: absolute;
+  width: 400px;
+  height: 1px;
+  left: 140px;
+  top: 730px;
+  background: var(--grey);
+  border: none;
+}
+
+.social-media {
+  position: absolute;
+  width: 260px;
+  height: 48px;
+  left: 218px;
+  top: 791px;
+  overflow: visible;
+}
+
+.social-media ul {
+  display: flex;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+.social-media ul li {
+  list-style: none;
+}
+
+.social-media ul li a{
+  display: flex;
+  width: 42px;
+  height: 42px;
+  margin-right: 20px;
+  align-items: center;
+  border: 2px solid #E2E3E4;
+  border-radius: 50%;
+}
+
+.icon-facebook {
+  padding-left: 17px;
+}
+
+.icon-twitter, .icon-youtube, .icon-instagram {  
+  padding-left: 13px;
+} 
+
+.social-media ul li a:hover > svg > path
+{
+  opacity: 1;
+  fill:white;
+} 
+
+.social-media ul li a > svg > path
+{
+  opacity: 0.4;
+} 
+
+.media-facebook a:hover, .media-instagram a:hover, .media-twitter a:hover, .media-youtube a:hover {
+  box-shadow: 0px 20px 40px rgba(19, 24, 33, 0.3);
+}
+
+.media-facebook a:hover {
+  background-color: #4267B2;
+} 
+.media-instagram a:hover {
+  background-color: #C13584;
+} 
+.media-twitter a:hover {
+  background-color: #1DA1F2;
+}
+.media-youtube a:hover{
+  background-color: #FF0000;
+}
+
+.media-facebook a:active {
+  background-color: #2F4A80;
+}
+.media-instagram a:active {
+  background-color: #8F2762;
+}
+.media-twitter a:active {
+  background-color: #177FBF;
+}
+.media-youtube a:active{
+  background-color: #CC0000;
+}
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 480px) {
+
+  html {
+    min-width: 375px;
+    min-height: 812px;
+  }
+
+  body {
+    min-width: 375px;
+    min-height: 812px;
+  }
+
+  .main-window {
+    min-width: 375px;
+    min-height: 812px;
+  }
+
+  .window-login {
+    position: relative;
+    width: 100vw;
+  }
+
+  .mobile-login-bg {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 66px);
+    min-width: 375px;
+    min-height: 746px;
+    left: 0px;
+    top: 66px;
+    background-image: url(img/image_summer_mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .window-image 
+  {
+    display: none;
+    height: 0px;
+    width: 0px;
+  }
+  
+  .home-img {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 100px;
+    vertical-align: bottom;
+  }
+
+  .home-img-src {
+    content: url('img/logo_pineapple.svg');
+  }
+
+  .login {
+    width: 375px;
+    height: 812px;
+  }
+  
+  .topbar {
+    position: absolute;
+    width: 375px;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+  }
+  
+  .topbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 375px;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+    background-color: white;
+    overflow: hidden;
+  }
+    
+  .topbar ul li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .about, .howitworks, .contact {
+    padding-top: 10px;
+  }
+    
+  .topbar ul li a {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black-grey);
+    text-decoration: none;
+  }
+  
+  .about, .howitworks {
+    padding-right: 17px;
+  }
+  
+  .login-info {
+    position: absolute;
+    width: 335px;
+    height: 371px;
+    left: 20px;
+    top: 188px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+  }
+  
+  .subscribe {
+    position: absolute;
+    width: 295px;
+    height: 34px;
+    left: 20px;
+    top: 15px;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--black);
+  }
+  
+  .subscribe-info {
+    position: absolute;
+    width: 295px;
+    height: 52px;
+    left: 20px;
+    top: 63px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;
+    color: #6A707B;
+  }
+  
+  .input-email {
+    position: absolute;
+    position: absolute;
+    width: 295px;
+    height: 60px;
+    left: 20px;
+    top: 146px;
+
+    background: #FFFFFF;
+    border: 1px solid #E3E3E4;
+    box-sizing: border-box;
+
+    border-left: 4px solid var(--blue);
+    box-sizing: border-box;
+
+    padding-left: 15px;
+  }
+
+  .submit-button {
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    left: 276px;
+    top: 169px;
+  }
+  
+  .input-email-arrow-icon {
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    left: 276px;
+    top: 169px;
+  }
+
+  .error {
+    position: absolute;
+    width: 300px;
+    height: 26px;
+    left: 30px;
+    top: 188px; 
+    font-size: 11px;
+  }
+  
+  .input-checkbox {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 20px;
+    top: 227px;
+  }
+  
+  .icon-checkbox {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 20px;
+    top: 227px;
+  } 
+  
+  .input-checkbox-info {
+    position: absolute;
+    width: 254px;
+    height: 28px;
+    left: 61px;
+    top: 227px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--black-grey);
+  }
+  
+  .separator {
+    position: absolute;
+    width: 295px;
+    height: 1px;
+    left: 20px;
+    top: 266px;
+    background: #E3E3E4;
+    border: none;
+  }
+
+  .social-media {
+    position: absolute;
+    width: 214px;
+    height: 46px;
+    left: 53px;
+    top: 295px;
+  }
+
+  .social-media ul li a{
+    margin-right: 10px;
+  }
+
+  .social-media ul li a > svg > path
+  {
+    opacity: 0.3;
+  } 
+}
+
+
+

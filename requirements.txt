@@ -1,0 +1,13 @@
+1. HTML/CSS
+	- Main funtionality
+	- Use of preprocessor LESS
+2. Javascript
+	- Change project to React app
+3. PHP
+	- Create DB
+	- Parse input errors like JS
+	- Save data
+	- Display the table (Easy table with html)
+
+mysqld
+mysql -h localhost -P 3306 -u root -p
