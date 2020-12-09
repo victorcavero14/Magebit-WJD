@@ -47,7 +47,7 @@ window.onload = function() {
             trophy.style.top = '269px';
             trophy.style.background = "url(img/ic_success.svg)"
         }
-        return true; // True if we want to the see the PHP with the Database or False if we do not want to.
+        return false; // True if we want to the see the PHP with the Database or False if we do not want to.
     };
 }
 
